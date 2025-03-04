@@ -75,16 +75,20 @@ export default function App() {
               hamda ta’lim resurslariga kengroq imkoniyat yaratishga yo‘naltirilgan.
             </span></div>
 
-          <div className="w-1/2 h-full flex items-center justify-center relative" style={{transform:"scale(1.4)"}}>
-            <i
-              className="fas fa-brain fa-10x text-cyan-400 relative"
-              style={{
-                textShadow: "0px 0px 10px rgba(0, 238, 255, 0.8)"
-              }}
-            ></i>
-            <span className="absolute w-60 h-60 border-2 border-cyan-400 rounded-full animate-spin-slow"></span>
-            <span className="absolute w-80 h-80 border-2 border-cyan-400 rounded-full animate-spin-reverse"></span>
-          </div>
+            <div className="w-1/2 h-full flex items-center justify-center relative" style={{ transform: "scale(1.4)" }}>
+  <i
+    className="fas fa-brain fa-10x text-cyan-400 relative"
+    style={{
+      textShadow: "0px 0px 10px rgba(0, 238, 255, 0.8)"
+    }}
+  ></i>
+  <span className="absolute w-60 h-60 border-2 border-cyan-400 rounded-full animate-spin-slow"></span>
+  <span className="absolute w-80 h-80 border-2 border-cyan-400 rounded-full animate-spin-reverse"></span>
+
+  {/* 🌟 UCHQUNLAR */}
+  <div className="sparks"></div>
+</div>
+
 
         </div>
       </div>

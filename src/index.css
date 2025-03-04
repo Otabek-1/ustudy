@@ -1,28 +1,40 @@
 @import "tailwindcss";
-
-@keyframes spin-slow {
+@keyframes sparks {
     0% {
-      transform: rotateX(70deg) rotateY(0deg);
+      opacity: 0;
+      transform: translate(0, 0) scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(calc(-10px + 20px * random()), calc(-10px + 20px * random())) scale(1.2);
     }
     100% {
-      transform: rotateX(70deg) rotateY(360deg);
+      opacity: 0;
+      transform: translate(0, 0) scale(0.8);
     }
   }
   
-  @keyframes spin-reverse {
-    0% {
-      transform: rotateX(70deg) rotateY(0deg) rotateZ(0deg);
-    }
-    100% {
-      transform: rotateX(70deg) rotateY(360deg) rotateZ(360deg);
-    }
+  .sparks {
+    position: absolute;
+    width: 120px;
+    height: 120px;
   }
   
-  .animate-spin-slow {
-    animation: spin-slow 5s linear infinite;
+  .sparks::before,
+  .sparks::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: rgba(0, 238, 255, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 238, 255, 1);
+    animation: sparks 1s infinite alternate;
   }
   
-  .animate-spin-reverse {
-    animation: spin-reverse 6s linear infinite;
+  .sparks::after {
+    left: 100px;
+    top: 30px;
+    animation-delay: 0.5s;
   }
   
