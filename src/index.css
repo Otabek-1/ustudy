@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@keyframes spin-slow {
+    0% {
+      transform: rotateX(70deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(70deg) rotateY(360deg);
+    }
+  }
+  
+  @keyframes spin-reverse {
+    0% {
+      transform: rotateX(70deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(70deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 5s linear infinite;
+  }
+  
+  .animate-spin-reverse {
+    animation: spin-reverse 6s linear infinite;
+  }
+  
