@@ -37,7 +37,7 @@ export default function App() {
   }, [charIndex, isDeleting, index, sentences]);
 
   return (
-    <div className='w-full h-max g-slate-200 flex flex-col' style={{ overflow: "auto", scrollbarWidth: "none" }}>
+    <div className='w-full h-max g-slate-200 flex flex-col'>
       <div className=" hero w-full h-screen relative">
         <img src={hero} className='w-full h-screen object-cover' alt="Hero" />
         <div className="hero-texts w-full h-screen bg-blue-200 absolute top-0 left-0 z-10 flex flex-col justify-center p-10 gap-5" style={{ background: "linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(57,162,201,1) 35%, rgba(0,212,255,0) 100%)" }}>
@@ -54,17 +54,17 @@ export default function App() {
               Kirish
             </Link>
 
-            <Link
-              to="/auth"
+            <a
+              href="#about-us"
               className="text-white text-2xl bg-transparent border-2 border-cyan-300 py-3 px-12 rounded-full w-max transition-all hover:shadow-lg hover:shadow-cyan-400/50"
             >
               Batafsil
-            </Link>
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="w-full h-screen bg-slate-100 flex flex-col">
+      <div className="w-full h-max bg-slate-100 flex flex-col" id='about-us'  >
         <div className="about-us w-full h-screen flex items-center justify-start gap-5 p-5">
           <div className="flex flex-col w-1/2 gap-8 ">
             <h2 className="text-gray-700 text-8xl ">Biz haqimizda</h2>
@@ -75,21 +75,21 @@ export default function App() {
               hamda ta’lim resurslariga kengroq imkoniyat yaratishga yo‘naltirilgan.
             </span></div>
 
-            <div className="w-1/2 h-full flex items-center justify-center relative" style={{ transform: "scale(1.4)" }}>
-  <i
-    className="fas fa-brain fa-10x text-cyan-400 relative"
-    style={{
-      textShadow: "0px 0px 10px rgba(0, 238, 255, 0.8)"
-    }}
-  ></i>
-  <span className="absolute w-60 h-60 border-2 border-cyan-400 rounded-full animate-spin-slow"></span>
-  <span className="absolute w-80 h-80 border-2 border-cyan-400 rounded-full animate-spin-reverse"></span>
+          <div className="w-1/2 h-full flex items-center justify-center relative" style={{transform:"scale(1.4)"}}>
+            <i
+              className="fas fa-brain fa-10x text-cyan-400 relative"
+              style={{
+                textShadow: "0px 0px 10px rgba(0, 238, 255, 0.8)"
+              }}
+            ></i>
+            <span className="absolute w-60 h-60 border-2 border-cyan-400 rounded-full animate-spin-slow"></span>
+            <span className="absolute w-80 h-80 border-2 border-cyan-400 rounded-full animate-spin-reverse"></span>
+          </div>
 
-  {/* 🌟 UCHQUNLAR */}
-  <div className="sparks"></div>
-</div>
-
-
+              <input type="submit" value="Jo'natish" className='w-full bg-cyan-500 text-white font-semibold text-lg p-2 rounded-full cursor-pointer' />
+            </div>
+            <textarea name="" className='w-1/2 outline-none border-2 border-cyan-300 rounded-lg p-5 text-gray-700 bg-white' required id=""></textarea>
+          </form>
         </div>
       </div>
     </div>
