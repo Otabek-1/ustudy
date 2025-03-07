@@ -38,3 +38,72 @@
     animation-delay: 0.5s;
   }
   
+  .box {
+    position: relative;
+    width: 100%;
+    background: rgba(0, 255, 255, 0.237);
+    /* border-radius: 12px; */
+    /* overflow: hidden; */
+  }
+  
+  /* Yuqori-chap qalin chiziq */
+  .box::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-left: 3px solid cyan;
+    border-top: 3px solid cyan;
+    z-index: 999;
+}
+
+  
+  .box::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-bottom: 3px solid cyan;
+    border-right: 3px solid cyan;
+  }
+  
+
+  .comment{
+    background: rgba(0, 255, 255, 0.31);
+    /* border-radius: 12px; */
+    position: relative;
+    border-radius: 0px 10px 0px 10px;
+  }
+
+
+  .comment::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-left: 3px solid cyan;
+    border-top: 3px solid cyan;
+    z-index: 999;
+}
+
+  
+  .comment::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-bottom: 3px solid cyan;
+    border-right: 3px solid cyan;
+  }
