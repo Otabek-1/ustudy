@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function MyCourses() {
+  // LocalStorage'dan theme holatini olish
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+  useEffect(() => {
+    // Tanlangan mavzuni <html> elementiga qo‘shish
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   const courses = [
     {
       id: 1,
@@ -45,49 +58,49 @@ export default function MyCourses() {
   ];
 
   return (
-    <div className="p-6 w-full h-full bg-gray-100 overflow-y-auto">
+    <div className={`p-6 w-full h-full overflow-y-auto transition-all duration-300 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-900'}`}>
       
-      {/* Kurslar bo'limi */}
+      {/* Kurslar bo‘limi */}
       <section className="mb-8">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4">📚 Mening Kurslarim</h2>
+        <h2 className="text-3xl font-semibold mb-4">📚 Mening Kurslarim</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {courses.map((course) => (
             <Link 
               key={course.id}
               to={`/course/${course.id}`}
-              className="bg-white p-5 rounded-lg shadow-md transition-transform transform hover:scale-105"
+              className="p-5 rounded-lg shadow-md transition-transform transform hover:scale-105 bg-white dark:bg-gray-700"
             >
-              <h3 className="text-xl font-bold text-gray-700">{course.title}</h3>
-              <p className="text-gray-600">👨‍🏫 O‘qituvchi: {course.teacher}</p>
-              <p className="text-gray-500 text-sm">{course.description}</p>
-              <div className="mt-3 flex justify-between text-gray-600 text-sm">
+              <h3 className="text-xl font-bold">{course.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">👨‍🏫 O‘qituvchi: {course.teacher}</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm">{course.description}</p>
+              <div className="mt-3 flex justify-between text-sm">
                 <span>👨‍🎓 O‘quvchilar: {course.students} ta</span>
                 <span>⏳ Davomiylik: {course.duration}</span>
               </div>
-              <span className="block mt-2 text-sm font-semibold text-blue-500">📈 Daraja: {course.level}</span>
+              <span className="block mt-2 text-sm font-semibold text-blue-500 dark:text-blue-300">📈 Daraja: {course.level}</span>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Sinflar bo'limi */}
+      {/* Sinflar bo‘limi */}
       <section>
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4">🏫 Mening Sinflarim</h2>
+        <h2 className="text-3xl font-semibold mb-4">🏫 Mening Sinflarim</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {classes.map((cls) => (
             <Link 
               key={cls.id}
               to={`/class/${cls.id}`}
-              className="bg-white p-5 rounded-lg shadow-md transition-transform transform hover:scale-105"
+              className="p-5 rounded-lg shadow-md transition-transform transform hover:scale-105 bg-white dark:bg-gray-700"
             >
-              <h3 className="text-xl font-bold text-gray-700">{cls.name}</h3>
-              <p className="text-gray-600">👨‍🏫 Guruh rahbari: {cls.teacher}</p>
-              <p className="text-gray-500 text-sm">{cls.description}</p>
-              <div className="mt-3 flex justify-between text-gray-600 text-sm">
+              <h3 className="text-xl font-bold">{cls.name}</h3>
+              <p className="text-gray-600 dark:text-gray-300">👨‍🏫 Guruh rahbari: {cls.teacher}</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm">{cls.description}</p>
+              <div className="mt-3 flex justify-between text-sm">
                 <span>👨‍🎓 O‘quvchilar: {cls.students} ta</span>
                 <span>📚 Darslar: {cls.lessons} ta</span>
               </div>
-              <span className="block mt-2 text-sm font-semibold text-green-500">🔰 Daraja: {cls.level}</span>
+              <span className="block mt-2 text-sm font-semibold text-green-500 dark:text-green-300">🔰 Daraja: {cls.level}</span>
             </Link>
           ))}
         </div>

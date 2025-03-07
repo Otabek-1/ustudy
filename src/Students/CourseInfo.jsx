@@ -38,6 +38,11 @@ export default function CourseInfo() {
                         <i className="fas fa-user-group"></i>
                         4 500 tugatgan
                     </span>
+
+                    <span className="text-white flex items-center gap-2 px-3 py-2 bg-cyan-200/40 rounded-lg ">
+                        <i className="fas fa-money-bill"></i>
+                        3 500 000 so'm
+                    </span>
                 </div>
 
                 <button className="text-white w-max bg-cyan-300 text-xl px-5 py-2  rounded-lg cursor-pointer transition-all duration-500 hover:opacity-75">Kursni olish</button>

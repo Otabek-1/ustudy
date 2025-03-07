@@ -15,6 +15,8 @@ export default function App() {
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  
+
   useEffect(() => {
     const handleTyping = () => {
       if (!isDeleting && charIndex < sentences[index].length) {
