@@ -14,8 +14,9 @@ export default function CreateClass() {
   }
 
   return (
-    <div className='w-full h-screen bg-slate-200 flex p-5 flex-col items-center' >
-      <form action="" className=" w-1/2 h-full bg-white shadow-xl text-black flex flex-col p-5 items-center gap-4 rounded-lg">
+    <div className='w-full h-max bg-slate-200 flex p-5 flex-col items-center' >
+    
+      <form action="" className=" w-1/2 h-max bg-white shadow-xl text-black flex flex-col p-5 items-center gap-4 rounded-lg">
         <h3 className="text-xl font-semibold">Yangi sinf</h3>
         <div className="flex flex-col gap-2 w-full">
           <label htmlFor="classname" className="text-blue-300 text-lg">Sinf nomini kiriting:</label>
@@ -38,19 +39,19 @@ export default function CreateClass() {
         <div className="flex flex-col gap-2 mt-4 w-full">
           <div className="flex-items-center gap-2 w-full">
             <input type="checkbox" name="" id="limit" onChange={() => setHasLimit(!hasLimit)} />
-            <label htmlFor="limit ml-2">O'quvchilar soniga cheklov o'rnatilsin.</label>
+            <label htmlFor="limit">O'quvchilar soniga cheklov o'rnatilsin.</label>
           </div>
-          <label htmlFor="classname" className="text-blue-300 text-lg">Maksimal o'quvchi soni:</label>
+          <label htmlFor="limitnum" className="text-blue-300 text-lg">Maksimal o'quvchi soni:</label>
           <input
-            type="text"
-            id="classname"
+            type="number"
+            id="limitnum"
             className={`border-2 border-gray-500 ${hasLimit ? "opacity-50" : ""} outline-none p-2 text-md rounded-xl`}
             disabled={hasLimit}
             placeholder="Shu yerga kiriting."
           />
         </div>
 
-        <input type="submit" value="Saqlash" />
+        <input type="submit" value="Saqlash" className='mt-5 text-xl text-white bg-gradient-to-r from-purple-500 to-cyan-500 px-5 py-3 rounded-full cursor-pointer transition-all duration-500 hover:scale-105' />
       </form>
     </div>
   )

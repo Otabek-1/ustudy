@@ -19,7 +19,7 @@ export default function Tmain() {
                             </span>
                             <span className="id text-gray-300 flex text-xs items-center gap-2">
                                 ID: <span onClick={() => { navigator.clipboard.writeText("S2g4V3Qgkr"); setCopied(true) }} className='cursor-pointer transition-all duration-500 hover:bg-gray-500 hover:opacity-80 px-1 py-1 rounded-md select-none'>S2g4V3Qgkr</span>
-                                {copied ? <i className="fas fa-check"></i> : null}
+                                {copied ? <i className="fas fa-check text-green-500"> copied</i> : null}
                             </span>
                             <div className="notification w-3 h-3 rounded-full bg-cyan-300 absolute top-[20%] right-0"></div>
                         </div>
@@ -30,9 +30,9 @@ export default function Tmain() {
                             </span>
                         </div>
                         <div className="flex items-center gap-4 relative">
-                            <button className="text-white w-max flex items-center gap-2 text-lg px-4 py-2 rounded-lg bg-green-400 cursor-pointer transition-all duration-500 hover:opacity-85 hover:scale-95">
+                            <Link to={`/class/${"S2g4V3Qgkr"}`} className="text-white w-max flex items-center gap-2 text-lg px-4 py-2 rounded-lg bg-green-400 cursor-pointer transition-all duration-500 hover:opacity-85 hover:scale-95">
                                 <i class="fa-solid fa-door-open"></i>
-                                Kirish</button>
+                                Kirish</Link>
                             <button className="text-white w-max flex items-center gap-2 text-lg px-4 py-2 rounded-lg bg-slate-400  transition-all duration-500 hover:opacity-85 hover:scale-95 cursor-pointer">
                                 <i className="fas fa-cog"></i>
                                 Sozlamalar</button>

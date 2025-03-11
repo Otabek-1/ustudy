@@ -8,6 +8,7 @@ import DashboardS from './Students/DashboardS.jsx'
 import CourseInfo from './Students/CourseInfo.jsx'
 import DashboardT from './Teachers/DashboardT.jsx'
 import CreateClass from './Teachers/CreateClass.jsx'
+import Class from './Teachers/Class.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/join-course' element={<CourseInfo />} />
       <Route path='/dashboard-t/:menu' element={<DashboardT />}  />
       <Route path='/create-class' element={<CreateClass />} />
+      <Route path='/class/:id' element={<Class />} />
     </Routes>
   </BrowserRouter>
 )
