@@ -9,6 +9,7 @@ import CourseInfo from './Students/CourseInfo.jsx'
 import DashboardT from './Teachers/DashboardT.jsx'
 import CreateClass from './Teachers/CreateClass.jsx'
 import Class from './Teachers/Class.jsx'
+import DeskTranslation from './Teachers/DeskTranslation.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/dashboard-t/:menu' element={<DashboardT />}  />
       <Route path='/create-class' element={<CreateClass />} />
       <Route path='/class/:id' element={<Class />} />
+      <Route path='/desk' element={<DeskTranslation />} />
     </Routes>
   </BrowserRouter>
 )

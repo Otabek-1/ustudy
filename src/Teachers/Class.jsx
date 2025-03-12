@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import "../fontawesome-free-6.7.2-web/css/all.css";
 
 export default function Class() {
@@ -25,7 +25,7 @@ export default function Class() {
             <div className="w-full h-screen p-3 flex flex-col relative">
                 <div className="flex items-center gap-2">
                     <button className="text-white px-4 py-2 text-lg bg-gradient-to-r rounded-lg from-purple-400 to-cyan-400 flex items-center gap-2 cursor-pointer transition-all duration-500 hover:opacity-85 hover:scale-95"> <i className="fas fa-video"></i> Videochat tashkillashtirish</button>
-                    <button className="text-white px-4 py-2 text-lg bg-gradient-to-r rounded-lg from-purple-400 to-cyan-400 flex items-center gap-2 cursor-pointer transition-all duration-500 hover:opacity-85 hover:scale-95"><i class="fa-solid fa-chalkboard"></i>Doska orqali translyatsiya</button>
+                    <Link to='/desk' target='_blank' className="text-white px-4 py-2 text-lg bg-gradient-to-r rounded-lg from-purple-400 to-cyan-400 flex items-center gap-2 cursor-pointer transition-all duration-500 hover:opacity-85 hover:scale-95"><i class="fa-solid fa-chalkboard"></i>Doska orqali translyatsiya</Link>
                     <button onClick={() => setchatWindow(true)} className="text-white px-4 py-2 text-lg bg-gradient-to-r rounded-lg from-purple-400 to-cyan-400 flex items-center gap-2 cursor-pointer transition-all duration-500 hover:opacity-85 hover:scale-95"><i class="fa-solid fa-message"></i> Chat</button>
                     <button onClick={() => setAlertModal(true)} className="text-white px-4 py-2 text-lg bg-gradient-to-r rounded-lg from-purple-400 to-cyan-400 flex items-center gap-2 cursor-pointer transition-all duration-500 hover:opacity-85 hover:scale-95"><i class="fa-solid fa-circle-exclamation"></i> O'quvchilarga e'lon qilish</button>
                 </div>
