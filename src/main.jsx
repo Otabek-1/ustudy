@@ -10,6 +10,8 @@ import DashboardT from './Teachers/DashboardT.jsx'
 import CreateClass from './Teachers/CreateClass.jsx'
 import Class from './Teachers/Class.jsx'
 import DeskTranslation from './Teachers/DeskTranslation.jsx'
+import Conference from './Teachers/Conference.jsx'
+import CreateExam from './Teachers/CreateExam.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -22,6 +24,8 @@ createRoot(document.getElementById('root')).render(
       <Route path='/create-class' element={<CreateClass />} />
       <Route path='/class/:id' element={<Class />} />
       <Route path='/desk' element={<DeskTranslation />} />
+      <Route path='/video-conference' element={<Conference />} />
+      <Route path='/create-exam' element={<CreateExam />} />
     </Routes>
   </BrowserRouter>
 )
