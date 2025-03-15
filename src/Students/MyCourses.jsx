@@ -90,7 +90,7 @@ export default function MyCourses() {
           {classes.map((cls) => (
             <Link 
               key={cls.id}
-              to={`/class/${cls.id}`}
+              to={`/my-class/${cls.id}`}
               className="p-5 rounded-lg shadow-md transition-transform transform hover:scale-105 bg-white dark:bg-gray-700"
             >
               <h3 className="text-xl font-bold">{cls.name}</h3>

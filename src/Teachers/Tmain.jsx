@@ -33,12 +33,12 @@ export default function Tmain() {
                             <Link to={`/class/${"S2g4V3Qgkr"}`} className="text-white w-max flex items-center gap-2 text-lg px-4 py-2 rounded-lg bg-green-400 cursor-pointer transition-all duration-500 hover:opacity-85 hover:scale-95">
                                 <i class="fa-solid fa-door-open"></i>
                                 Kirish</Link>
-                            <button className="text-white w-max flex items-center gap-2 text-lg px-4 py-2 rounded-lg bg-slate-400  transition-all duration-500 hover:opacity-85 hover:scale-95 cursor-pointer">
+                            <Link to={`/class-settings/${"S2g4V3Qgkr"}`} className="text-white w-max flex items-center gap-2 text-lg px-4 py-2 rounded-lg bg-slate-400  transition-all duration-500 hover:opacity-85 hover:scale-95 cursor-pointer">
                                 <i className="fas fa-cog"></i>
-                                Sozlamalar</button>
-                            <button className="text-white w-max flex items-center gap-2 text-lg px-4 py-2 rounded-lg bg-slate-400  transition-all duration-500 hover:opacity-85 hover:scale-95 cursor-pointer">
+                                Sozlamalar</Link>
+                            {/* <button className="text-white w-max flex items-center gap-2 text-lg px-4 py-2 rounded-lg bg-slate-400  transition-all duration-500 hover:opacity-85 hover:scale-95 cursor-pointer">
                                 <i className="fas fa-circle-info"></i>
-                                Info</button>
+                                Info</button> */}
                         </div>
                     </li>
                 </ul>
